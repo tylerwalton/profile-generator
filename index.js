@@ -35,6 +35,8 @@ const instance = new Manager (response.name, response.id, response.email, respon
 employeeArray.push(instance)
 console.log(employeeArray)
 // add function here to ask if you want a new team member
+memberPrompt()
+
 })
 }
 
@@ -74,9 +76,9 @@ function engineerPrompt() {
       employeeArray.push(instance);
       console.log(employeeArray);
       // add function here to ask if you want a new team member
+      memberPrompt ()
     });
 }
-
 
 
 function internPrompt() {
@@ -114,10 +116,34 @@ function internPrompt() {
       employeeArray.push(instance);
       console.log(employeeArray);
       // add function here to ask if you want a new team member
+      memberPrompt () 
     });
 }
 
+function memberPrompt () {
+    inquirer.prompt ([{
+    type : 'list',
+    name : 'newMember', 
+    message : 'Would you like to add a new employee?',
+    choices : ['Manager', 'Engineer', 'Intern', 'None']
+    }
+    ]) .then(response => {
+        if (response.newMember === 'Manager') {
+            managerPrompt ()
+        }
+        else if (response.newMember === 'Engineer') {
+            engineerPrompt ()
+        }
+        else if (response.newMember === 'Intern') {
+            internPrompt ()
+        }
+        else {console.log('Team Created!')}
 
+    })
+
+}
+
+managerPrompt()
 // const tyler = new Engineer ('tyler', '910', 'tylerwalton300@gmail.com','tylerwalton')
 // console.log(tyler)
 
