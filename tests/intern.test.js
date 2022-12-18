@@ -1,18 +1,17 @@
-const Engineer = require("../lib/Engineer");
+const Intern = require("../lib/Intern");
 
-describe("Engineer", () => {
+describe("Intern", () => {
   // test description saying this should test if constructor creates and object
 
-  //test for email next
-  it("should accept a github argument", () => {
-    const exampleGitHub = "t";
-    const result = new Engineer("tyler", "1234", "tyler", exampleGitHub);
-    expect(result.github).toEqual(exampleGitHub);
+  it("should accept a school argument", () => {
+    const exampleSchool = "t";
+    const result = new Intern("tyler", "1234", "tyler", exampleSchool);
+    expect(result.school).toEqual(exampleSchool);
   });
 
-  it("getGitHub should return github", () => {
-    const exampleGitHub = "t";
-    const result = new Engineer("tyler", "1234", "tyler", exampleGitHub);
-    expect(result.getGitHub()).toEqual(exampleGitHub);
+  it("getGitHub should return school", () => {
+    const exampleSchool = "t";
+    const result = new Intern("tyler", "1234", "tyler", exampleSchool);
+    expect(result.getSchool()).toEqual(exampleSchool);
   });
 });
