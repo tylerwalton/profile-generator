@@ -5,6 +5,7 @@ const Intern = require ('./lib/Intern')
 const inquirer = require ('inquirer')
 const fs = require ('fs')
 const employeeArray = []
+const createHTML = require ('./src/createHTML')
 
 function managerPrompt () {
     inquirer.prompt ([
@@ -137,7 +138,10 @@ function memberPrompt () {
         else if (response.newMember === 'Intern') {
             internPrompt ()
         }
-        else {console.log('Team Created!')}
+        else {console.log('Team Created!')
+        fs.writeFileSync('./dist/index.html', createHTML(employeeArray))
+      
+      }
 
     })
 
