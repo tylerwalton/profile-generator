@@ -2,35 +2,46 @@ const createHTML = (employeeArray) => {
 let cardArray = []
 
 const createManager = (employee) => {
-    return `<h3> Employee ID : ${employee.getId()} </h3>
-    <h3> Office Number : ${employee.getOfficeNumber()} </h3>
-    <div class="card" style="width: 18rem;">
-    <div class="card-body">
-    <h5 class="card-title"> ${employee.getRole()}</h5>
+    return `<div class= "container text-center">
+    <div class="card row align-items-center" style="width: 18rem;">
+    <div class="card-body col" id="card-main-body">
+    <h4 class="card-title"> ${employee.getRole()}</h5>
     <p class="card-text">Name: ${employee.getName()}</p>
-    <p class="card-text">Name: ${employee.getId()}</p>
-    <p class="card-text">Name: ${employee.getOfficeNumber()}</p>
-    <a href="#" class="btn btn-primary">Email: ${employee.getEmail()}</a>
+    <p class="card-text">Employee ID: ${employee.getId()}</p>
+    <p class="card-text">Office Number: ${employee.getOfficeNumber()}</p>
+    <a href=mailto: class="card-link">Email: ${employee.getEmail()}</a>
+  </div>
   </div>
 </div>
     `;
 }
 // create intern and create engineer functions as above
 const createEngineer = (employee) => {
-  return `<h2>${employee.getRole()}</h2>
-    <h3> Name: ${employee.getName()} </h3>
-    <h3> Email: ${employee.getEmail()} </h3>
-    <h3> Employee ID : ${employee.getId()} </h3>
-    <h3> Office Number : ${employee.getGitHub()} </h3>
-    `;
+  return `<div class= "container text-center">
+    <div class="card row align-items-center" style="width: 18rem;">
+    <div class="card-body col" id="card-main-body">
+    <h4 class="card-title"> ${employee.getRole()}</h5>
+    <p class="card-text">Name: ${employee.getName()}</p>
+    <p class="card-text">Employee ID: ${employee.getId()}</p>
+    <a href="card-text">GitHub: ${employee.getGitHub()}</a>
+    <a href=mailto: class="card-link">Email: ${employee.getEmail()}</a>
+  </div>
+  </div>
+</div>`;
 };
+
 const createIntern = (employee) => {
-  return `<h2>${employee.getRole()}</h2>
-    <h3> Name: ${employee.getName()} </h3>
-    <h3> Email: ${employee.getEmail()} </h3>
-    <h3> Employee ID : ${employee.getId()} </h3>
-    <h3> Office Number : ${employee.getSchool()} </h3>
-    `;
+  return `<div class= "container text-center">
+    <div class="card row align-items-center" style="width: 18rem;">
+    <div class="card-body col" id="card-main-body">
+    <h4 class="card-title"> ${employee.getRole()}</h5>
+    <p class="card-text">Name: ${employee.getName()}</p>
+    <p class="card-text">Employee ID: ${employee.getId()}</p>
+    <p class="card-text">School: ${employee.getSchool()}</p>
+    <a href=mailto: class="card-link">Email: ${employee.getEmail()}</a>
+  </div>
+  </div>
+</div>`;
 };
 
 employeeArray.forEach(employee => {
@@ -58,8 +69,9 @@ module.exports = employeeArray => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fetch Response Status</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./style.css"/>
   </head>
+  <header class= "text-center display-1 text-bg-success p-3"> My Team </header>
   <body>
     ${createHTML(employeeArray)} 
   </body>
