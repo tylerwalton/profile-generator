@@ -15,7 +15,7 @@ Here is a list of my motivations for this project!
 
 ## <u>**Recording**</u>
 
-https://drive.google.com/file/d/1mdr1CO-5C28PTSNh4sFd8sRBUnlNhVT5/preview
+https://drive.google.com/file/d/1mdr1CO-5C28PTSNh4sFd8sRBUnlNhVT5/view
 
 ## <u>**Author**</u>
 
