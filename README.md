@@ -6,16 +6,16 @@ Here is a list of my motivations for this project!
 
 - learn how to properly use Node.js for generating a readme through command line operation
 - utilizing template literals to interpolate variables into strings
-- lastly, I wanted to create a fully functioning readme generator that myself and anyone I know can use to effortlessly create a professional file. 
+- lastly, I wanted to create a fully functioning team member generator that myself and anyone I know can use to effortlessly create a page with their team represented on it.
 
 
 ## <u>**Screenshots**</u>
 
-![alt text](./assets/Node%20Created%20README.png)
+![alt text](./imgs/127.0.0.1_5500_dist_index.html.png)
 
 ## <u>**Recording**</u>
 
-https://user-images.githubusercontent.com/113783273/207164195-91972693-dc46-4987-b9ad-7d73f5fef035.mp4
+
 
 ## <u>**Author**</u>
 

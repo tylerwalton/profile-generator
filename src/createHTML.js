@@ -9,7 +9,7 @@ const createManager = (employee) => {
     <p class="card-text">Name: ${employee.getName()}</p>
     <p class="card-text">Employee ID: ${employee.getId()}</p>
     <p class="card-text">Office Number: ${employee.getOfficeNumber()}</p>
-    <a href=mailto: class="card-link">Email: ${employee.getEmail()}</a>
+    <a href="mailto:${employee.getEmail()}" class="card-link">Email: ${employee.getEmail()}</a>
   </div>
   </div>
 </div>
@@ -23,8 +23,8 @@ const createEngineer = (employee) => {
     <h4 class="card-title"> ${employee.getRole()}</h5>
     <p class="card-text">Name: ${employee.getName()}</p>
     <p class="card-text">Employee ID: ${employee.getId()}</p>
-    <a href="card-text">GitHub: ${employee.getGitHub()}</a>
-    <a href=mailto: class="card-link">Email: ${employee.getEmail()}</a>
+    <a href="https://github.com/${employee.getGitHub()}">GitHub: ${employee.getGitHub()}</a>
+    <a href="mailto:${employee.getEmail()}" class="card-link">Email: ${employee.getEmail()}</a>
   </div>
   </div>
 </div>`;
@@ -38,7 +38,7 @@ const createIntern = (employee) => {
     <p class="card-text">Name: ${employee.getName()}</p>
     <p class="card-text">Employee ID: ${employee.getId()}</p>
     <p class="card-text">School: ${employee.getSchool()}</p>
-    <a href=mailto: class="card-link">Email: ${employee.getEmail()}</a>
+    <a href="mailto:${employee.getEmail()}"class="card-link">Email: ${employee.getEmail()}</a>
   </div>
   </div>
 </div>`;
@@ -73,7 +73,9 @@ module.exports = employeeArray => {
   </head>
   <header class= "text-center display-1 text-bg-success p-3"> My Team </header>
   <body>
+  <div class= "flex">
     ${createHTML(employeeArray)} 
+  </div>  
   </body>
 </html>
 `;

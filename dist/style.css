@@ -1,9 +1,18 @@
 * {
     border: 0px;
     box-sizing: border-box;
-    
 }
 
 #card-main-body {
     border: solid;
+    margin-top: 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.card {
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
